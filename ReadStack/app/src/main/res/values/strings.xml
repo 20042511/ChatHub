@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ReadStack</string>
+
+    <!-- Bottom navigation -->
+    <string name="nav_library">Library</string>
+    <string name="nav_browse">Browse</string>
+    <string name="nav_search">Search</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Library -->
+    <string name="library_title">My Library</string>
+    <string name="library_empty">No books yet. Search or browse to find something to read.</string>
+
+    <!-- Browse -->
+    <string name="browse_title">Browse</string>
+    <string name="browse_github">GitHub</string>
+    <string name="browse_docs">Official Docs</string>
+    <string name="browse_ebooks">Free Ebooks</string>
+    <string name="browse_gutenberg">Project Gutenberg</string>
+
+    <!-- Search -->
+    <string name="search_title">Search the web</string>
+    <string name="search_hint">Title, author, topic…</string>
+    <string name="search_local">In my library</string>
+    <string name="search_web">On the web</string>
+
+    <!-- Detail -->
+    <string name="action_download">Download</string>
+    <string name="action_open">Open</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_retry">Retry</string>
+    <string name="action_delete">Delete</string>
+    <string name="download_progress">Downloading %1$d%%</string>
+
+    <!-- Reader -->
+    <string name="reader_highlight">Highlight</string>
+    <string name="reader_note">Note</string>
+    <string name="reader_jump_page">Jump to page</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_storage">Storage</string>
+    <string name="settings_about">About</string>
+    <string name="settings_clear_cache">Clear cache</string>
+    <string name="settings_version">Version</string>
+</resources>

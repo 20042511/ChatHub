@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="indigo_50">#FFEEF0FF</color>
+    <color name="indigo_100">#FFD9DDFF</color>
+    <color name="indigo_500">#FF4F46E5</color>
+    <color name="indigo_700">#FF3730A3</color>
+    <color name="indigo_900">#FF1E1B4B</color>
+    <color name="cream_50">#FFFDFAF3</color>
+    <color name="cream_100">#FFF6EFE0</color>
+    <color name="cream_900">#FF3D362B</color>
+    <color name="splash_bg">#FFFDFAF3</color>
+    <color name="splash_icon">#FF4F46E5</color>
+</resources>
