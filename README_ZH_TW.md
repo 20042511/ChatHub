@@ -1,10 +1,10 @@
 <div align="center">
   <img src="docs/icon.png" alt="App 圖標" width="100" />
-  <h1>RikkaHub</h1>
+  <h1>ChatHub</h1>
 
 一個原生Android LLM 聊天客戶端，支持切換不同的供應商進行聊天 🤖💬
 
-點擊加入我們的Discord伺服器 👉 [【RikkaHub】](https://discord.gg/9weBqxe5c4)
+點擊加入我們的Discord伺服器 👉 [【ChatHub】](https://discord.gg/9weBqxe5c4)
 
 [English](README.md) | 繁體中文 | [简体中文](README_ZH_CN.md)
 
@@ -18,17 +18,17 @@
 ## 🚀 下載
 
 🔗 [前往官網下載](https://rikka-ai.com/download)（推薦）
-🔗 [前往 Google Play 下載](https://play.google.com/store/apps/details?id=me.rerere.rikkahub)
+🔗 [前往 Google Play 下載](https://play.google.com/store/apps/details?id=me.rerere.chathub)
 
 > [!WARNING]
-> RikkaHub 存在許多 fork 版本，fork 版本出現問題與 RikkaHub 無關，請謹慎使用 fork 版本，避免隱私洩露或者過度索要權限問題。
+> ChatHub 存在許多 fork 版本，fork 版本出現問題與 ChatHub 無關，請謹慎使用 fork 版本，避免隱私洩露或者過度索要權限問題。
 
 ## 💖 贊助商
 
 |                                                                              贊助商                                                                               | 介紹                                                                                                                                                                                                                                                                                                                                                      |
 |:--------------------------------------------------------------------------------------------------------------------------------------------------------------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |                                    <img src="docs/sponsors/aihubmix.png" alt="Aihubmix" width="50" /><br /><b>Aihubmix</b>                                     | 感謝 <a href="https://aihubmix.com?aff=pG7r">aihubmix.com</a> 的資金支持。我們推薦使用 aihubmix 作為全球主流模型的一站式服務平台。（OpenAI、Claude、Google Gemini、DeepSeek、Qwen 以及數百種其他模型）。                                                                                                                                                                                               |
-| <img src="docs/img/api-mart.png" alt="APIMart" width="50" /><br /><b><a href="https://go.apimart.ai/gh-rikkahub">APIMart</a></b> | 感謝 APIMart 贊助了本專案！APIMart 是專注 AI 圖片/影片生成的低價 API 平台，GPT-Image-2 低至 $0.006/張，1 美元可出圖 160+ 張。圖片、影片一套非同步 API 通吃，提交任務拿 ID、回呼取結果，批次生成萬張不逾時、換模型不改程式碼。按量付費、無月費，透過<a href="https://go.apimart.ai/gh-rikkahub">此註冊連結</a>註冊即可開始使用。 |
+| <img src="docs/img/api-mart.png" alt="APIMart" width="50" /><br /><b><a href="https://go.apimart.ai/gh-chathub">APIMart</a></b> | 感謝 APIMart 贊助了本專案！APIMart 是專注 AI 圖片/影片生成的低價 API 平台，GPT-Image-2 低至 $0.006/張，1 美元可出圖 160+ 張。圖片、影片一套非同步 API 通吃，提交任務拿 ID、回呼取結果，批次生成萬張不逾時、換模型不改程式碼。按量付費、無月費，透過<a href="https://go.apimart.ai/gh-chathub">此註冊連結</a>註冊即可開始使用。 |
 |                                      <img src="docs/sponsors/suixiang.jpg" alt="隨想AI網關" width="50" /><br /><b>隨想AI網關</b>                                       | 感謝隨想AI網關對本項目的贊助！隨想AI網關 是一家可靠高效的 API 中繼服務提供商，提供 Claude、Codex、Gemini 等的中繼服務。注重隱私的中轉站·無數據倒賣·無模型摻水，隱私，透明，極速售後。新帳戶註冊每日簽到就送 0.5 元測試額度，儲值額度 1:1，無需訂閱，按量付費。多線路冗餘、跨區域容災、自動故障切換，長鏈路 SSE 不中斷。99.9% 可用性，關鍵呼叫從不掉隊。                                                                                                                                                   |
 | <img src="docs/sponsors/maru.png" alt="MaruCode" width="50" /><br /><b><a href="https://api.muteki.site/register?aff=Rikkahub&promo=Rikkahub">MaruCode</a></b> | <b><a href="https://api.muteki.site/register?aff=Rikkahub&promo=Rikkahub">MaruCode</a></b> 是一家偶爾做做慈善的小破站 API，自營號池，主要提供 Codex、Claude Code、GPT Image 等主流模型，支援 Websocket 協定，明碼標價(Codex 0.25x, CC 1.5x)，透明匯率(1:1)，<a href="https://api.muteki.site/register?aff=Rikkahub&promo=Rikkahub">新用戶註冊送 2 刀</a>。<a href="https://images-2.muteki.site">生图工作台🖼️</a> |
 
@@ -75,18 +75,18 @@
 
 ## 💰 捐贈
 
-* [Patreon](https://patreon.com/rikkahub)
+* [Patreon](https://patreon.com/chathub)
 * [愛發電](https://afdian.com/a/reovo)
 
 ## ⭐ Star History
 
 如果喜歡這個項目，請給個Star ⭐
 
-<a href="https://www.star-history.com/?type=date&repos=re-ovo%2Frikkahub">
+<a href="https://www.star-history.com/?type=date&repos=re-ovo%2Fchathub">
  <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=re-ovo/rikkahub&type=date&theme=dark&legend=top-left&sealed_token=qSytWeq7LkzQQViTjK0MYlvvA_qkfuwjOxOqgbRpLUZZwok5rO6LXhpVL7Mq-q3o89BfKpzE7g66BCy18H6eiqTsD8czD0J-HejLqmHy-npcvCTHu11wZw" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=re-ovo/rikkahub&type=date&legend=top-left&sealed_token=qSytWeq7LkzQQViTjK0MYlvvA_qkfuwjOxOqgbRpLUZZwok5rO6LXhpVL7Mq-q3o89BfKpzE7g66BCy18H6eiqTsD8czD0J-HejLqmHy-npcvCTHu11wZw" />
-   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=re-ovo/rikkahub&type=date&legend=top-left&sealed_token=qSytWeq7LkzQQViTjK0MYlvvA_qkfuwjOxOqgbRpLUZZwok5rO6LXhpVL7Mq-q3o89BfKpzE7g66BCy18H6eiqTsD8czD0J-HejLqmHy-npcvCTHu11wZw" />
+   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/chart?repos=re-ovo/chathub&type=date&theme=dark&legend=top-left&sealed_token=qSytWeq7LkzQQViTjK0MYlvvA_qkfuwjOxOqgbRpLUZZwok5rO6LXhpVL7Mq-q3o89BfKpzE7g66BCy18H6eiqTsD8czD0J-HejLqmHy-npcvCTHu11wZw" />
+   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/chart?repos=re-ovo/chathub&type=date&legend=top-left&sealed_token=qSytWeq7LkzQQViTjK0MYlvvA_qkfuwjOxOqgbRpLUZZwok5rO6LXhpVL7Mq-q3o89BfKpzE7g66BCy18H6eiqTsD8czD0J-HejLqmHy-npcvCTHu11wZw" />
+   <img alt="Star History Chart" src="https://api.star-history.com/chart?repos=re-ovo/chathub&type=date&legend=top-left&sealed_token=qSytWeq7LkzQQViTjK0MYlvvA_qkfuwjOxOqgbRpLUZZwok5rO6LXhpVL7Mq-q3o89BfKpzE7g66BCy18H6eiqTsD8czD0J-HejLqmHy-npcvCTHu11wZw" />
  </picture>
 </a>
 
