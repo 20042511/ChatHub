@@ -23,7 +23,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "me.rerere.rikkahub"
+        applicationId = "com.chathub.app"
         minSdk = 26
         targetSdk = 37
         versionCode = 191
