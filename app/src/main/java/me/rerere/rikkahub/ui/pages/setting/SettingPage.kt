@@ -67,6 +67,7 @@ import me.rerere.hugeicons.stroke.WavingHand01
 import me.rerere.rikkahub.R
 import me.rerere.rikkahub.Screen
 import me.rerere.rikkahub.data.datastore.isNotConfigured
+import me.rerere.rikkahub.data.config.ChatHubV1Scope
 import me.rerere.rikkahub.data.files.FilesManager
 import me.rerere.rikkahub.ui.components.nav.BackButton
 import me.rerere.rikkahub.ui.components.ui.CardGroup
@@ -227,24 +228,30 @@ fun SettingPage(vm: SettingVM = koinViewModel()) {
                         supportingContent = { Text(stringResource(R.string.setting_page_search_service_desc)) },
                         headlineContent = { Text(stringResource(R.string.setting_page_search_service)) },
                     )
+                    if (ChatHubV1Scope.SHOW_SPEECH_SETTINGS) {
                     item(
                         onClick = { navController.navigate(Screen.SettingSpeech) },
                         leadingContent = { Icon(HugeIcons.Megaphone01, null) },
                         supportingContent = { Text(stringResource(R.string.setting_page_tts_service_desc)) },
                         headlineContent = { Text(stringResource(R.string.setting_page_tts_service)) },
                     )
+                    }
+                    if (ChatHubV1Scope.ENABLE_MCP_TOOLS) {
                     item(
                         onClick = { navController.navigate(Screen.SettingMcp) },
                         leadingContent = { Icon(HugeIcons.McpServer, null) },
                         supportingContent = { Text(stringResource(R.string.setting_page_mcp_desc)) },
                         headlineContent = { Text(stringResource(R.string.setting_page_mcp)) },
                     )
+                    }
+                    if (ChatHubV1Scope.SHOW_WEB_SERVER_SETTINGS) {
                     item(
                         onClick = { navController.navigate(Screen.SettingWeb) },
                         leadingContent = { Icon(HugeIcons.ServerStack01, null) },
                         supportingContent = { Text(stringResource(R.string.setting_page_web_server_desc)) },
                         headlineContent = { Text(stringResource(R.string.setting_page_web_server)) },
                     )
+                    }
                 }
             }
 

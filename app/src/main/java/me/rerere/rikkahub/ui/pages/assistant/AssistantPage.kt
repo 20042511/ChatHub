@@ -53,6 +53,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.util.fastForEach
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import me.rerere.rikkahub.R
+import me.rerere.rikkahub.data.config.ChatHubV1Scope
 import me.rerere.rikkahub.Screen
 import me.rerere.rikkahub.data.datastore.DEFAULT_ASSISTANTS_IDS
 import me.rerere.rikkahub.data.datastore.Settings
@@ -446,7 +447,7 @@ private fun AssistantItem(
                     horizontalArrangement = Arrangement.spacedBy(8.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
-                    if (assistant.enableMemory) {
+                    if (ChatHubV1Scope.ENABLE_LONG_TERM_MEMORY && assistant.enableMemory) {
                         Tag(type = TagType.SUCCESS) {
                             Text(stringResource(R.string.assistant_page_memory_count, memories.size))
                         }

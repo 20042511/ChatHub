@@ -17,6 +17,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import me.rerere.hugeicons.HugeIcons
 import me.rerere.rikkahub.R
+import me.rerere.rikkahub.data.config.ChatHubV1Scope
 import me.rerere.hugeicons.stroke.Book03
 import me.rerere.hugeicons.stroke.File02
 import me.rerere.hugeicons.stroke.Folder01
@@ -68,18 +69,22 @@ fun ExtensionsPage() {
                         headlineContent = { Text(stringResource(R.string.extensions_page_prompts)) },
                         supportingContent = { Text(stringResource(R.string.extensions_page_prompts_desc)) },
                     )
+                    if (ChatHubV1Scope.ENABLE_SKILLS) {
                     item(
                         onClick = { navController.navigate(Screen.Skills) },
                         leadingContent = { Icon(HugeIcons.Puzzle, null) },
                         headlineContent = { Text(stringResource(R.string.extensions_page_agent_skills)) },
                         supportingContent = { Text(stringResource(R.string.extensions_page_agent_skills_desc)) },
                     )
+                    }
+                    if (ChatHubV1Scope.SHOW_WORKSPACE_ENTRY) {
                     item(
                         onClick = { navController.navigate(Screen.Workspaces) },
                         leadingContent = { Icon(HugeIcons.Folder01, null) },
                         headlineContent = { Text(stringResource(R.string.extensions_page_workspace)) },
                         supportingContent = { Text(stringResource(R.string.extensions_page_workspace_desc)) },
                     )
+                    }
                 }
             }
         }

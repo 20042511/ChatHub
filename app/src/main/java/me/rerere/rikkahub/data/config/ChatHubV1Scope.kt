@@ -27,4 +27,12 @@ object ChatHubV1Scope {
 
     /** v1 uses the built-in search tool, not external MCP tool packs. */
     const val ENABLE_MCP_TOOLS = false
+
+    /** Keep the v1 surface focused on chat, assistants, providers, search and history. */
+    const val SHOW_SPEECH_SETTINGS = false
+    const val SHOW_WEB_SERVER_SETTINGS = false
+    const val SHOW_ASSISTANT_EXTENSIONS = false
+    const val SHOW_IMAGE_GENERATION = false
+    const val SHOW_TRANSLATOR = false
+    const val SHOW_WORKSPACE_ENTRY = false
 }

@@ -69,6 +69,7 @@ import me.rerere.hugeicons.stroke.Settings03
 import me.rerere.hugeicons.stroke.Sparkles
 import me.rerere.hugeicons.stroke.TransactionHistory
 import me.rerere.rikkahub.R
+import me.rerere.rikkahub.data.config.ChatHubV1Scope
 import me.rerere.rikkahub.Screen
 import me.rerere.rikkahub.data.datastore.Settings
 import me.rerere.rikkahub.data.model.Assistant
@@ -345,8 +346,9 @@ fun ChatDrawerContent(
                     },
                 )
 
-                Box {
-                    DrawerAction(
+                if (ChatHubV1Scope.SHOW_TRANSLATOR || ChatHubV1Scope.SHOW_IMAGE_GENERATION) {
+                    Box {
+                        DrawerAction(
                         icon = {
                             Icon(HugeIcons.Sparkles, "Menu")
                         },
@@ -377,6 +379,7 @@ fun ChatDrawerContent(
                                 navController.navigate(Screen.ImageGen)
                             }
                         )
+                    }
                     }
                 }
 

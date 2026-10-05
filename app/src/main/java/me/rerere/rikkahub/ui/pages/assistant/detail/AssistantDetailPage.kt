@@ -33,6 +33,7 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import me.rerere.rikkahub.R
+import me.rerere.rikkahub.data.config.ChatHubV1Scope
 import me.rerere.rikkahub.Screen
 import me.rerere.rikkahub.data.model.Assistant
 import me.rerere.rikkahub.ui.components.nav.BackButton
@@ -107,6 +108,7 @@ fun AssistantDetailPage(id: String) {
                         headlineContent = { Text(stringResource(R.string.assistant_page_tab_prompt)) },
                         trailingContent = { Icon(HugeIcons.ArrowRight01, null) },
                     )
+                    if (ChatHubV1Scope.SHOW_ASSISTANT_EXTENSIONS) {
                     item(
                         onClick = { navController.navigate(Screen.AssistantInjections(id)) },
                         leadingContent = { Icon(HugeIcons.Puzzle, null) },
@@ -114,13 +116,16 @@ fun AssistantDetailPage(id: String) {
                         headlineContent = { Text(stringResource(R.string.assistant_page_tab_extensions)) },
                         trailingContent = { Icon(HugeIcons.ArrowRight01, null) },
                     )
-                    item(
-                        onClick = { navController.navigate(Screen.AssistantMemory(id)) },
-                        leadingContent = { Icon(HugeIcons.Brain02, null) },
-                        supportingContent = { Text(stringResource(R.string.assistant_detail_memory_desc)) },
-                        headlineContent = { Text(stringResource(R.string.assistant_page_tab_memory)) },
-                        trailingContent = { Icon(HugeIcons.ArrowRight01, null) },
-                    )
+                    }
+                    if (ChatHubV1Scope.ENABLE_LONG_TERM_MEMORY) {
+                        item(
+                            onClick = { navController.navigate(Screen.AssistantMemory(id)) },
+                            leadingContent = { Icon(HugeIcons.Brain02, null) },
+                            supportingContent = { Text(stringResource(R.string.assistant_detail_memory_desc)) },
+                            headlineContent = { Text(stringResource(R.string.assistant_page_tab_memory)) },
+                            trailingContent = { Icon(HugeIcons.ArrowRight01, null) },
+                        )
+                    }
                     item(
                         onClick = { navController.navigate(Screen.AssistantRequest(id)) },
                         leadingContent = { Icon(HugeIcons.Code, null) },
@@ -128,6 +133,7 @@ fun AssistantDetailPage(id: String) {
                         headlineContent = { Text(stringResource(R.string.assistant_page_tab_request)) },
                         trailingContent = { Icon(HugeIcons.ArrowRight01, null) },
                     )
+                    if (ChatHubV1Scope.ENABLE_MCP_TOOLS) {
                     item(
                         onClick = { navController.navigate(Screen.AssistantMcp(id)) },
                         leadingContent = { Icon(HugeIcons.Wrench01, null) },
@@ -135,6 +141,8 @@ fun AssistantDetailPage(id: String) {
                         headlineContent = { Text(stringResource(R.string.assistant_page_tab_mcp)) },
                         trailingContent = { Icon(HugeIcons.ArrowRight01, null) },
                     )
+                    }
+                    if (ChatHubV1Scope.ENABLE_LOCAL_TOOLS) {
                     item(
                         onClick = { navController.navigate(Screen.AssistantLocalTool(id)) },
                         leadingContent = { Icon(HugeIcons.BookOpen01, null) },
@@ -142,6 +150,7 @@ fun AssistantDetailPage(id: String) {
                         headlineContent = { Text(stringResource(R.string.assistant_page_tab_local_tools)) },
                         trailingContent = { Icon(HugeIcons.ArrowRight01, null) },
                     )
+                    }
                 }
             }
         }

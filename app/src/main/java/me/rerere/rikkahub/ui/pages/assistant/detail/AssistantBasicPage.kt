@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import me.rerere.ai.provider.ModelType
 import me.rerere.rikkahub.R
+import me.rerere.rikkahub.data.config.ChatHubV1Scope
 import me.rerere.rikkahub.data.db.entity.WorkspaceEntity
 import me.rerere.rikkahub.data.model.Assistant
 import me.rerere.rikkahub.ui.components.ai.ModelSelector
@@ -184,6 +185,7 @@ internal fun AssistantBasicContent(
 
             HorizontalDivider()
 
+            if (ChatHubV1Scope.SHOW_WORKSPACE_ENTRY) {
             FormItem(
                 label = {
                     Text(stringResource(R.string.assistant_page_workspace))
@@ -212,6 +214,7 @@ internal fun AssistantBasicContent(
             }
 
             HorizontalDivider()
+            }
 
             FormItem(
                 modifier = Modifier.padding(8.dp),
