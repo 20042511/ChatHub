@@ -1,0 +1,20 @@
+{
+  "name": "ChatHub Dev",
+  "image": "mcr.microsoft.com/devcontainers/go:1.22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
+  },
+  "forwardPorts": [8082, 8083, 8084, 8085],
+  "portsAttributes": {
+    "8082": {"label": "Chat Service", "onAutoForward": "notify"},
+    "8083": {"label": "Agent Gateway", "onAutoForward": "notify"},
+    "8084": {"label": "MCP Proxy", "onAutoForward": "silent"},
+    "8085": {"label": "LLM Router", "onAutoForward": "silent"}
+  },
+  "postCreateCommand": "cd bff/services && for d in */; do (cd $d && go mod download); done",
+  "customizations": {
+    "vscode": {
+      "extensions": ["golang.go"]
+    }
+  }
+}

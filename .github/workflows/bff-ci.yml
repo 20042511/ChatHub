@@ -1,0 +1,43 @@
+name: BFF CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: bff/services
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.22"
+          cache: false
+      - name: gofmt check
+        run: |
+          for d in llm-router agent-gateway chat-service mcp-proxy; do
+            if [ -n "$(cd "$d" && gofmt -l .)" ]; then
+              echo "gofmt diff in $d:"; (cd "$d" && gofmt -d .)
+              exit 1
+            fi
+          done
+      - name: Build & vet each service
+        run: |
+          for d in llm-router agent-gateway chat-service mcp-proxy; do
+            echo "::group:: $d"
+            (cd "$d" && go build ./... && go vet ./... && echo "OK $d")
+            echo "::endgroup::"
+          done
+      - name: Smoke test (mock, no API keys needed)
+        run: |
+          cd llm-router && go build -o /tmp/llm-router . && cd -
+          PORT=8085 /tmp/llm-router &
+          sleep 1
+          curl -fsS http://127.0.0.1:8085/health; echo
+          curl -fsS -X POST http://127.0.0.1:8085/llm/route \
+            -d '{"provider":"openai","messages":[{"role":"user","content":"ci"}]}'; echo

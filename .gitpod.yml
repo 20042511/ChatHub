@@ -1,0 +1,39 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Build Services
+    init: |
+      cd bff/services
+      for d in llm-router agent-gateway chat-service mcp-proxy; do
+        (cd $d && go build -o /tmp/$d . && echo "✓ $d built")
+      done
+    command: |
+      echo "Starting services..."
+      cd /tmp
+      PORT=8084 ./mcp-proxy > /workspace/logs/mcp.log 2>&1 &
+      PORT=8085 ./llm-router > /workspace/logs/llm.log 2>&1 &
+      sleep 1
+      PORT=8083 ./agent-gateway > /workspace/logs/agw.log 2>&1 &
+      PORT=8082 ./chat-service > /workspace/logs/chat.log 2>&1 &
+      sleep 2
+      echo "✓ All services running"
+      echo "Chat Service: $(gp url 8082)"
+      echo "Agent Gateway: $(gp url 8083)"
+      tail -f /workspace/logs/*.log
+
+ports:
+  - port: 8082
+    onOpen: notify
+    visibility: public
+    description: Chat Service API
+  - port: 8083
+    onOpen: ignore
+    visibility: public
+  - port: 8084-8085
+    onOpen: ignore
+    visibility: public
+
+vscode:
+  extensions:
+    - golang.go
